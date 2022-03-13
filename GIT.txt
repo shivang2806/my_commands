@@ -1,0 +1,15 @@
+git init
+git config --global user.name shivang2203
+git config --global user.email shivangjindal01@gmail.com
+git add .
+git commit -m ""
+git remote add origin link
+git push origin master
+
+
+git clone repo link
+
+
+
+TOKEN 13-03-2022 90days ONLY
+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

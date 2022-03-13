@@ -1,0 +1,35 @@
+composer create-project --prefer-dist laravel/laravel product
+git clone -b name url
+php artisan key:generate 
+
+composer require laravel/ui
+php artisan ui vue --auth
+
+command mysql upload
+mysql -u root -p 'databsename' < 'path'
+
+php artisan make:controller PhotoController --resource --model=Photo
+php artisan make:model Model -m 
+
+php artisan make:mail "name" -m "view.name"   
+	"name" -> name of mail create in app folder/mail
+	"view.name" -> create new directory in resource/emails
+
+php artisan make:migration create_sports_table
+php artisan make:migration create_users_address_table
+php artisan make:migration add_role_to_users_table
+php artisan migrate:rollback
+
+protected $with = ['relationTableName']; 
+$var = User::with('relationName')->where('user_id', 1)->first();
+
+git clone -b Shivang url
+
+php artisan vendor:publish --tag=laravel-pagination
+
+events, trigger
+
+Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class
+ composer require anhskohbo/no-captcha
+
+git checkout commit_id  
