@@ -1,0 +1,66 @@
+===========================
+TO INSTALL SAAS
+
+npm run dev
+
+=============================
+MIGRATION CMD
+
+php artisan make:migration create_group_table --create=group
+php artisan make:migration add_role_to_users_table --table=users
+php artisan migrate
+php artisan migrate:refresh --seed
+php artisan migrate:fresh --seed
+php artisan migrate:rollback --step=6
+
+
+php artisan make:seeder UserSeeder
+
+
+=============================
+install npm
+=============================
+laravel Commands
+
+To Generate Models with Controllers:
+php artisan make:controller InstitutionController --resource --model=Institution
+php artisan make:model CompanyType
+
+To Generate cron Commands:
+php artisan make:command SendMail
+
+To run cron file single:
+php artisan send:mail
+
+To run cron for all files in cron:
+php artisan schedule:run
+
+To create storage system
+php artisan storage:link
+=======================================
+
+list of all Commands:
+php artisan list
+php artisan world:init
+
+list of all routes:
+php arisan route:list
+
+===================================
+cmd for metronic theme
+cd prowly/Dev_docs/metronic-responsive-admin-dashboard-template614/theme/default/demo1/tools 
+npm run localhost                                                                        
+
+https://gist.github.com/jeffochoa/a162fc4381d69a2d862dafa61cda0798
+
+
+====================================
+VS code beautifier
+alt+shift+f
+
+========
+add all world
+https://github.com/khsing/laravel-world
+
+mail tracker
+https://github.com/jdavidbakr/mail-tracker
