@@ -1,66 +1,100 @@
-===========================
-TO INSTALL SAAS
+=====================================
+To Install Laravel
+=====================================
 
-npm run dev
+composer create-project --prefer-dist laravel/laravel product
+composer require laravel/ui
+php artisan ui vue --auth
 
-=============================
-MIGRATION CMD
 
-php artisan make:migration create_group_table --create=group
-php artisan make:migration add_role_to_users_table --table=users
+====================================
+for run with out artisan
+====================================
+
+project/server.php rename to project/index.php
+project/public/.htaccess move to here project/.htaccess
+fix /public in index.php to public/ 
+
+
+=====================================
+Migrations
+=====================================
+
+php artisan make:migration create_users_address_table
+php artisan make:migration add_role_to_users_table
+php artisan make:migration create_sports_table
 php artisan migrate
+php artisan make:seeder UserSeeder
 php artisan migrate:refresh --seed
 php artisan migrate:fresh --seed
 php artisan migrate:rollback --step=6
 
 
-php artisan make:seeder UserSeeder
-
-
-=============================
-install npm
-=============================
+=====================================
 laravel Commands
+=====================================
 
 To Generate Models with Controllers:
 php artisan make:controller InstitutionController --resource --model=Institution
 php artisan make:model CompanyType
+php artisan make:model Model -m 
 
-To Generate cron Commands:
-php artisan make:command SendMail
 
-To run cron file single:
-php artisan send:mail
-
-To run cron for all files in cron:
-php artisan schedule:run
-
-To create storage system
-php artisan storage:link
-=======================================
-
+=====================================
 list of all Commands:
+====================================
+
 php artisan list
-php artisan world:init
-
-list of all routes:
+php artisan key:generate 
+php artisan storage:link
 php arisan route:list
+php artisan world:init
+php artisan vendor:publish --tag=laravel-pagination
 
-===================================
-cmd for metronic theme
-cd prowly/Dev_docs/metronic-responsive-admin-dashboard-template614/theme/default/demo1/tools 
-npm run localhost                                                                        
 
-https://gist.github.com/jeffochoa/a162fc4381d69a2d862dafa61cda0798
+====================================
+Laravel Mail
+====================================
+php artisan make:mail "name" -m "view.name"   
+	"name" -> name of mail create in app folder/mail
+	"view.name" -> create new directory in resource/emails
 
+
+====================================
+GIT COMMANDS
+====================================
+git clone -b name url
+git status
+git add .
+git add -u
+git diff
+git commit -m ""
+git push origin master/branch
+git checkout .
+git checkout commit_id
+
+
+====================================
+protected $with = ['relationTableName']; 
+$var = User::with('relationName')->where('user_id', 1)->first();
+====================================
+
+====================================
+Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class
+ composer require anhskohbo/no-captcha
+====================================
 
 ====================================
 VS code beautifier
 alt+shift+f
+====================================
 
-========
+====================================
 add all world
 https://github.com/khsing/laravel-world
+====================================
 
-mail tracker
-https://github.com/jdavidbakr/mail-tracker
+====================================
+command mysql upload
+mysql -u root -p 'databsename' < 'path'
+====================================
